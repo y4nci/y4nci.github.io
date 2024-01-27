@@ -2,13 +2,14 @@
     font-family: "SF-Pro";
     src: local("SF-Pro-Display-Regular"),
         url("../fonts/SF-Pro-Display-Regular.otf") format("opentype");
+    font-weight: 400;
 }
 
 @font-face {
     font-family: "SF-Pro";
     src: local("SF-Pro-Display-Bold"),
         url("../fonts/SF-Pro-Display-Bold.otf") format("opentype");
-    font-weight: bold;
+    font-weight: 700;
 }
 
 @font-face {
@@ -36,14 +37,14 @@
     font-family: "SF-Pro";
     src: local("SF-Pro-Display-Thin"),
         url("../fonts/SF-Pro-Display-Thin.otf") format("opentype");
-    font-weight: 100;
+    font-weight: 200;
 }
 
 @font-face {
     font-family: "SF-Pro";
     src: local("SF-Pro-Display-Ultralight"),
         url("../fonts/SF-Pro-Display-Ultralight.otf") format("opentype");
-    font-weight: 200;
+    font-weight: 100;
 }
 
 @font-face {
@@ -64,6 +65,7 @@
     font-family: "SF-Pro";
     src: local("SF-Pro-Display-RegularItalic"),
         url("../fonts/SF-Pro-Display-RegularItalic.otf") format("opentype");
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -71,7 +73,8 @@
     font-family: "SF-Pro";
     src: local("SF-Pro-Display-BoldItalic"),
         url("../fonts/SF-Pro-Display-BoldItalic.otf") format("opentype");
-    font-weight: bold;
+    /* font weight not bold but a number */
+    font-weight: 700;
     font-style: italic;
 }
 
