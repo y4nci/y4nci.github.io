@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/home/static/css/main.3da26ab2.css",
-    "main.js": "/home/static/js/main.97dbf7c2.js",
+    "main.css": "/home/static/css/main.d66dbfed.css",
+    "main.js": "/home/static/js/main.8e6c8804.js",
     "static/media/SF-Pro-Display-Semibold.otf": "/home/static/media/SF-Pro-Display-Semibold.f50e0151c241f0e9d573.otf",
     "static/media/SF-Pro-Display-Medium.otf": "/home/static/media/SF-Pro-Display-Medium.e1d844da0ee028d4e288.otf",
     "static/media/SF-Pro-Display-Heavy.otf": "/home/static/media/SF-Pro-Display-Heavy.a48bcc073f92987abb91.otf",
@@ -34,11 +34,11 @@
     "static/media/behance.png": "/home/static/media/behance.161d3e1e9e9c97d79aaa.png",
     "static/media/linkedin.png": "/home/static/media/linkedin.b0f1df143fb3329ad840.png",
     "index.html": "/home/index.html",
-    "main.3da26ab2.css.map": "/home/static/css/main.3da26ab2.css.map",
-    "main.97dbf7c2.js.map": "/home/static/js/main.97dbf7c2.js.map"
+    "main.d66dbfed.css.map": "/home/static/css/main.d66dbfed.css.map",
+    "main.8e6c8804.js.map": "/home/static/js/main.8e6c8804.js.map"
   },
   "entrypoints": [
-    "static/css/main.3da26ab2.css",
-    "static/js/main.97dbf7c2.js"
+    "static/css/main.d66dbfed.css",
+    "static/js/main.8e6c8804.js"
   ]
 }
