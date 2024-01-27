@@ -204,3 +204,36 @@ p {
 .footer-text a {
     font-size: 12px;
 }
+
+/** for narrow screens like mobile **/
+@media (max-width: 900px) {
+    body {
+        height: auto;
+    }
+    .content {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+    }
+    .right {
+        justify-content: flex-start;
+    }
+    .footer {
+        position: relative;
+        bottom: 0;
+    }
+    .external-button-group {
+        top: 0;
+        flex-direction: column;
+    }
+    .external-button-group:hover {
+        width: 50px;
+        height: 300px;
+    }
+    .external-button {
+        margin-left: unset !important;
+        margin-right: unset !important;
+        margin-top: -25px;
+        margin-bottom: -25px;
+    }
+}
