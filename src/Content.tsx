@@ -97,13 +97,23 @@ export const Content = () => {
                 <Middle theme={theme} />
                 <Right theme={theme} />
             </div>
-            <div className='toggle-theme'>
+            <div className='footer'>
                 <Button
                     icon={<Icon icon={theme === 'light' ? 'moon' : 'flash'} color={theme === 'light' ? '#222' : '#ffd36b'} />}
                     onClick={toggleTheme}
                     minimal
                     className='rounded-button'
                 />
+
+                <div className='footer-text'>
+                    <a
+                        href='https://github.com/y4nci/home'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className={`source-${theme}`}
+                    >source</a>
+                    <p>baran yancı, 2024</p>
+                </div>
             </div>
         </div>
     );

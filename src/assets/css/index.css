@@ -54,7 +54,7 @@ p {
 
 .content {
     width: 100%;
-    height: 93vh;
+    height: calc(100vh - 55px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,4 +163,44 @@ p {
 
 .more-button-light, .more-button-dark {
     transition: all 0.2s ease;
+}
+
+.footer {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.source-light {
+    color: #000;
+}
+
+.source-dark {
+    color: #fff;
+}
+
+.source-light, .source-dark {
+    transition: all 0.2s ease;
+}
+
+.footer-text {
+    position: absolute;
+    margin: 2px;
+    right: 0;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 100 !important;
+}
+
+.footer-text p {
+    margin: 0;
+}
+
+.footer-text a {
+    font-size: 12px;
 }
