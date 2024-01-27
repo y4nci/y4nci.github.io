@@ -2,6 +2,7 @@ import { Button, Divider, Icon } from '@blueprintjs/core';
 import React, { useState } from 'react';
 
 import Me from './assets/images/me.jpeg';
+import { externalLinks, getIconForExternalLink, openExternalLink } from './services/externalLinks';
 
 const Left = () => {
     const letterSpacingValues = [
@@ -42,6 +43,24 @@ const Middle = (props: { theme: Theme }) => {
                 alt='me'
                 className={`middle-image-${props.theme}`}
             />
+            <div className='external-button-group'>
+                <Button
+                    icon={<Icon icon='plus' color={props.theme === 'light' ? 'white' : 'black'} />}
+                    className={`rounded-button more-button-${props.theme} external-button`}
+                    style={{ zIndex: externalLinks.length + 1, marginLeft: 0 }}
+                />
+                {externalLinks.map((link, i) => (
+                    <Button
+                        key={i}
+                        icon={<img style={{ width: '25px', height: '25px' }} src={getIconForExternalLink(link, props.theme)} alt={link} />}
+                        className={`rounded-button more-button-${props.theme} external-button`}
+                        onClick={() => openExternalLink(link)}
+                        style={{
+                            zIndex: externalLinks.length - i,
+                        }}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
@@ -83,7 +102,7 @@ export const Content = () => {
                     icon={<Icon icon={theme === 'light' ? 'moon' : 'flash'} color={theme === 'light' ? '#222' : '#ffd36b'} />}
                     onClick={toggleTheme}
                     minimal
-                    className='toggle-button'
+                    className='rounded-button'
                 />
             </div>
         </div>
