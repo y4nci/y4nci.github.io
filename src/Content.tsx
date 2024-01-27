@@ -46,8 +46,8 @@ const Middle = (props: { theme: Theme }) => {
             <div className='external-button-group'>
                 <Button
                     icon={<Icon icon='plus' color={props.theme === 'light' ? 'white' : 'black'} />}
-                    className={`rounded-button more-button-${props.theme} external-button`}
-                    style={{ zIndex: externalLinks.length + 1, marginLeft: 0 }}
+                    className={`rounded-button more-button-${props.theme} external-button plus-button`}
+                    style={{ zIndex: externalLinks.length + 1 }}
                 />
                 {externalLinks.map((link, i) => (
                     <Button

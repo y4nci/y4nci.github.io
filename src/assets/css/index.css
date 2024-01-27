@@ -123,6 +123,10 @@ p {
     border-radius: 50%;
 }
 
+.plus-button {
+    margin-left: 0;
+}
+
 .external-button-group {
     position: relative;
     top: -30px;
@@ -222,8 +226,11 @@ p {
         position: relative;
         bottom: 0;
     }
+    .plus-button {
+        margin-left: unset !important;
+        margin-top: 0 !important;
+    }
     .external-button-group {
-        top: 0;
         flex-direction: column;
     }
     .external-button-group:hover {
