@@ -1,9 +1,5 @@
-let currentTheme: Theme = 'light';
-
-export const getTheme = () => {
-    return currentTheme;
-};
-
-export const setTheme = (theme: Theme) => {
-    currentTheme = theme;
+export const getTheme = (): Theme => {
+    const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    return darkThemeMq.matches ? 'dark' : 'light';
 };

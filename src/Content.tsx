@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import Me from './assets/images/me.jpeg';
 import { externalLinks, getIconForExternalLink, openExternalLink } from './services/externalLinks';
+import { getTheme } from './services/themeService';
 
 const Left = () => {
     const letterSpacingValues = [
@@ -84,7 +85,7 @@ const Right = (props: { theme: Theme }) => {
 };
 
 export const Content = () => {
-    const [theme, setTheme] = useState<Theme>('light');
+    const [theme, setTheme] = useState<Theme>(getTheme());
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
