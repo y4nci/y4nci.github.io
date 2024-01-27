@@ -124,7 +124,7 @@ p {
 }
 
 .plus-button {
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
 .external-button-group {
@@ -238,8 +238,8 @@ p {
         height: 300px;
     }
     .external-button {
-        margin-left: unset !important;
-        margin-right: unset !important;
+        margin-left: unset;
+        margin-right: unset;
         margin-top: -25px;
         margin-bottom: -25px;
     }
