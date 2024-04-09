@@ -134,12 +134,12 @@ p {
     left: 275px;
     display: flex;
     align-items: flex-start;
-    width: 50px;
+    min-width: 50px;
     transition: all ease 0.2s;
 }
 
 .external-button-group:hover {
-    width: 300px;
+    min-width: 350px;
 }
 
 .external-button-group:hover * {
