@@ -135,6 +135,7 @@ p {
     display: flex;
     align-items: flex-start;
     min-width: 50px;
+    max-width: 50px;
     transition: all ease 0.2s;
 }
 
