@@ -1,10 +1,10 @@
 import { Button, Divider, Icon } from '@blueprintjs/core';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Me from './assets/images/me.jpeg';
 import { Name } from './assets/svg/NameWhite';
 import { externalLinks, getIconForExternalLink, openExternalLink } from './services/externalLinks';
-import { getTheme } from './services/themeService';
+import { getPreferredTheme, setBodyTheme } from './services/themeService';
 
 const Left = (props: { theme: Theme }) => {
     return (
@@ -20,19 +20,19 @@ const Middle = (props: { theme: Theme }) => {
             <img
                 src={Me}
                 alt='me'
-                className={`middle-image-${props.theme}`}
+                className="middle-image"
             />
             <div className='external-button-group'>
                 <Button
                     icon={<Icon icon='plus' color={props.theme === 'light' ? 'white' : 'black'} />}
-                    className={`plus-button rounded-button more-button-${props.theme} external-button`}
+                    className="plus-button rounded-button more-button external-button"
                     style={{ zIndex: externalLinks.length + 1 }}
                 />
                 {externalLinks.map((link, i) => (
                     <Button
                         key={i}
                         icon={<img style={{ width: '25px', height: '25px' }} src={getIconForExternalLink(link, props.theme)} alt={link} />}
-                        className={`rounded-button more-button-${props.theme} external-button`}
+                        className="rounded-button more-button external-button"
                         onClick={() => openExternalLink(link)}
                         style={{
                             zIndex: externalLinks.length - i,
@@ -44,17 +44,17 @@ const Middle = (props: { theme: Theme }) => {
     );
 };
 
-const Right = (props: { theme: Theme }) => {
+const Right = () => {
     return (
         <div className='right'>
             <p>
                 Middle East Technical University, Computer Engineering
             </p>
-            <Divider className={`divider-${props.theme}`} />
+            <Divider className="divider" />
             <p>
                 FileMap, Inc.
             </p>
-            <Divider className={`divider-${props.theme}`} />
+            <Divider className="divider" />
             <p>
                 Ankara, Turkey
             </p>
@@ -63,18 +63,22 @@ const Right = (props: { theme: Theme }) => {
 };
 
 export const Content = () => {
-    const [theme, setTheme] = useState<Theme>(getTheme());
+    const [theme, setTheme] = useState<Theme>(getPreferredTheme());
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
     };
 
+    useEffect(() => {
+        setBodyTheme(theme);
+    }, [theme]);
+
     return (
-        <div className={`theme-${theme}`}>
+        <div className="content-container">
             <div className='content'>
                 <Left theme={theme} />
                 <Middle theme={theme} />
-                <Right theme={theme} />
+                <Right />
             </div>
             <div className='footer'>
                 <Button
@@ -89,7 +93,7 @@ export const Content = () => {
                         href='https://github.com/y4nci/y4nci.github.io'
                         target='_blank'
                         rel='noopener noreferrer'
-                        className={`source-${theme}`}
+                        className="source"
                     >source</a>
                     <p>baran yanci, 2024</p>
                 </div>
