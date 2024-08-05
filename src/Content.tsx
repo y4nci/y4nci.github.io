@@ -29,7 +29,7 @@ const Left = () => {
                         letterSpacing: `${letterSpacingValues[i]}em`,
                     }}
                 >
-                    Baran Yancı
+                    Baran Yanci
                 </div>
             ))}
         </div>
@@ -108,12 +108,12 @@ export const Content = () => {
 
                 <div className='footer-text'>
                     <a
-                        href='https://github.com/y4nci/home'
+                        href='https://github.com/y4nci/y4nci.github.io'
                         target='_blank'
                         rel='noopener noreferrer'
                         className={`source-${theme}`}
                     >source</a>
-                    <p>baran yancı, 2024</p>
+                    <p>baran yanci, 2024</p>
                 </div>
             </div>
         </div>
