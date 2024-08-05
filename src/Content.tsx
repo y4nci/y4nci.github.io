@@ -2,36 +2,14 @@ import { Button, Divider, Icon } from '@blueprintjs/core';
 import React, { useState } from 'react';
 
 import Me from './assets/images/me.jpeg';
+import { Name } from './assets/svg/NameWhite';
 import { externalLinks, getIconForExternalLink, openExternalLink } from './services/externalLinks';
 import { getTheme } from './services/themeService';
 
-const Left = () => {
-    const letterSpacingValues = [
-        0,
-        0.021,
-        0.0444,
-        0.061,
-        0.074,
-        0.09,
-        0.101,
-        0.116,
-        0.1235,
-    ];
-
+const Left = (props: { theme: Theme }) => {
     return (
         <div className='left'>
-            {Array.from({ length: 9 }, (_, i) => (
-                <div
-                    key={i}
-                    className='left-text'
-                    style={{
-                        fontWeight: 900 - i * 100,
-                        letterSpacing: `${letterSpacingValues[i]}em`,
-                    }}
-                >
-                    Baran Yanci
-                </div>
-            ))}
+            <Name theme={props.theme} />
         </div>
     );
 };
@@ -94,7 +72,7 @@ export const Content = () => {
     return (
         <div className={`theme-${theme}`}>
             <div className='content'>
-                <Left />
+                <Left theme={theme} />
                 <Middle theme={theme} />
                 <Right theme={theme} />
             </div>
