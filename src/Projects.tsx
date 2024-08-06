@@ -1,7 +1,7 @@
 import { Divider, Icon } from '@blueprintjs/core';
 import React from 'react';
 
-import { isCorporate, isOrganisation, projectLinks } from './services/externalLinks';
+import { isOwnedByMe, projectLinks } from './services/externalLinks';
 
 const Project = (props: { title: string, description: string, link: string }) => {
     return (
@@ -9,13 +9,8 @@ const Project = (props: { title: string, description: string, link: string }) =>
             <div className='project-title'>
                 <h2>{props.title}</h2>
                 {
-                    isOrganisation(props.title) && (
-                        <Icon icon='people' iconSize={20} style={{ marginLeft: '5px' }}/>
-                    )
-                }
-                {
-                    isCorporate(props.title) && (
-                        <Icon icon='briefcase' iconSize={20} style={{ marginLeft: '5px' }}/>
+                    !isOwnedByMe(props.title) && (
+                        <Icon icon='third-party' iconSize={20} style={{ marginLeft: '5px' }}/>
                     )
                 }
             </div>

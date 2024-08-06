@@ -37,11 +37,11 @@ export const projectLinks: Projects = {
     },
 };
 
-const organisations = ['Scanning Bee'];
-const corporate = ['FileMap'];
+const ownedByMe = [
+    'Football Rankings', 'Bring the Twitter Bird Back',
+];
 
-export const isOrganisation = (link: string) => organisations.includes(link);
-export const isCorporate = (link: string) => corporate.includes(link);
+export const isOwnedByMe = (projectName: string) => ownedByMe.includes(projectName);
 
 const externalLinkURLs = {
     github: 'https://github.com/y4nci',

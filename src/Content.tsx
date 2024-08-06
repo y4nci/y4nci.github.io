@@ -55,17 +55,26 @@ const Middle = (props: { theme: Theme }) => {
 const Right = () => {
     return (
         <div className='right'>
-            <p>
-                Middle East Technical University, Computer Engineering
-            </p>
+            <div className='right-element'>
+                <Icon icon='learning' iconSize={20} />
+                <a href='https://ceng.metu.edu.tr/' target='_blank' rel='noopener noreferrer'>
+                    Middle East Technical University, Department of Computer Engineering
+                </a>
+            </div>
             <Divider className="divider" />
-            <p>
-                FileMap, Inc.
-            </p>
+            <div className='right-element'>
+                <Icon icon='office' iconSize={20} />
+                <a href='https://filemap.com' target='_blank' rel='noopener noreferrer'>
+                    FileMap, Inc.
+                </a>
+            </div>
             <Divider className="divider" />
-            <p>
-                Ankara, Turkey
-            </p>
+            <div className='right-element'>
+                <Icon icon='map-marker' iconSize={20} />
+                <p>
+                    Ankara, Turkey
+                </p>
+            </div>
         </div>
     );
 };
