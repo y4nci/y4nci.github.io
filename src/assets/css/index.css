@@ -50,7 +50,7 @@ p {
     color: var(--foreground1);
     background-color: var(--background1);
 
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .App {
@@ -79,7 +79,7 @@ p {
     flex-direction: column;
     justify-content: space-around;
 
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .left-text {
@@ -91,12 +91,53 @@ p {
     width: 300px;
 }
 
-.middle-image {
+.middle-element {
     width: 300px;
     height: 300px;
     border: 5px solid var(--foreground1);
+    position: relative;
+}
 
+.projects {
+    height: 290px;
+    width: 300px;
+    overflow-y: scroll;
     transition: all 0.4s ease;
+}
+.projects > h1 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.projects > h3 {
+    font-weight: bold;
+}
+.projects > p {
+    margin: 0;
+    font-weight: 100;
+}
+.projects::-webkit-scrollbar {
+    display: none;
+}
+
+.project-list {
+    padding: 10px 10px 0;
+}
+
+.project {
+    margin-bottom: 25px;
+}
+.project > p {
+    font-weight: 400;
+}
+
+.project-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-title > h2 {
+    margin: 10px 0 0;
+    font-weight: 500;
 }
 
 .right {
@@ -112,7 +153,7 @@ p {
 
 .divider {
     background-color: var(--foreground2);
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
 }
 
 .rounded-button{
@@ -134,7 +175,7 @@ p {
     align-items: flex-start;
     min-width: 50px;
     max-width: 50px;
-    transition: all ease 0.4s;
+    transition: all ease 0.3s;
 }
 
 .external-button-group:hover {
@@ -149,7 +190,7 @@ p {
     transform: translateZ(0);
     margin-right: -25px;
     margin-left: -25px;
-    transition: all ease 0.4s;
+    transition: all ease 0.3s;
 }
 
 .external-button:hover {
@@ -159,7 +200,7 @@ p {
 
 .more-button {
     background-color: var(--foreground1) !important;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 
@@ -176,7 +217,7 @@ p {
 
 .source {
     color: var(--foreground1);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .footer-text {
@@ -195,6 +236,33 @@ p {
 .footer-text a {
     font-size: 12px;
 }
+
+.show-on-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* To avoid it being interactable when hidden */
+}
+
+.middle-element:hover .show-on-hover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hide-on-hover {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.middle-element:hover .hide-on-hover {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 /** for narrow screens like mobile **/
 @media (max-width: 900px) {

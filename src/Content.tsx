@@ -2,7 +2,8 @@ import { Button, Divider, Icon } from '@blueprintjs/core';
 import React, { useEffect, useState } from 'react';
 
 import Me from './assets/images/me.jpeg';
-import { Name } from './assets/svg/NameWhite';
+import { Name } from './assets/svg/Name';
+import { Projects } from './Projects';
 import { externalLinks, getIconForExternalLink, openExternalLink } from './services/externalLinks';
 import { getPreferredTheme, setBodyTheme } from './services/themeService';
 
@@ -16,12 +17,19 @@ const Left = (props: { theme: Theme }) => {
 
 const Middle = (props: { theme: Theme }) => {
     return (
-        <div className='middle'>
-            <img
-                src={Me}
-                alt='me'
-                className="middle-image"
-            />
+        <div
+            className='middle'
+        >
+            <div className="middle-element">
+                <div className='show-on-hover'>
+                    <Projects />
+                </div>
+                <img
+                    src={Me}
+                    alt='me'
+                    className='hide-on-hover'
+                />
+            </div>
             <div className='external-button-group'>
                 <Button
                     icon={<Icon icon='plus' color={props.theme === 'light' ? 'white' : 'black'} />}
