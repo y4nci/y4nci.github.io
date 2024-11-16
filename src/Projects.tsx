@@ -1,42 +1,42 @@
-import { Divider, Icon } from '@blueprintjs/core';
+import { Icon } from '@blueprintjs/core';
 import React from 'react';
 
-import { isOwnedByMe, projectLinks } from './services/externalLinks';
-
-const Project = (props: { title: string, description: string, link: string }) => {
-    return (
-        <div className='project'>
-            <div className='project-title'>
-                <h2>{props.title}</h2>
-                {
-                    !isOwnedByMe(props.title) && (
-                        <Icon icon='third-party' iconSize={20} style={{ marginLeft: '5px' }}/>
-                    )
-                }
-            </div>
-            <p>{props.description}</p>
-            <a href={props.link} target='_blank' rel='noreferrer'>Go to project</a>
-        </div>
-    );
-};
+import Keyboard from './assets/images/keyboard.png';
+import { projectLinks } from './services/externalLinks';
+import { useActiveTab } from './services/useActiveTab';
 
 export const Projects = () => {
+    const { activeTab, setActiveTab } = useActiveTab();
+
+    const isActive = activeTab === 'projects';
+
+    console.log(projectLinks, isActive);
+
     return (
-        <div className='projects'>
-            <h1>Projects</h1>
-            <p>(some of them)</p>
-            <div className='project-list'>
-                {Object.entries(projectLinks).map(([title, { link, description }]) => (
-                    <>
-                        <Divider className="divider" />
-                        <Project key={title} title={title} description={description} link={link} />
-                    </>
-                ))}
+        <div
+            className={'projects'}
+            style={isActive ? { height: 'fit-content' } : undefined}
+        >
+            {!isActive && <img src={Keyboard} alt='projects' style={{ display: isActive ? 'none' : 'block' }} />}
+            <div
+                onClick={(e) => { setActiveTab(isActive ? null : 'projects'); e.stopPropagation(); }}
+                style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}
+            >
+                <h1 style={{ marginTop: isActive ? '-5px' : '0px' }}>Projects</h1>
+                <Icon
+                    size={50}
+                    icon={isActive ? 'chevron-up' : 'chevron-down'}
+                    style={{ color: 'var(--light-pinkish)', cursor: 'pointer' }}
+                />
             </div>
-            <Divider className="divider" />
-            <h3>
-                You can find more on my <a href='https://github.com/y4nci' target='_blank' rel='noreferrer'>GitHub</a>.
-            </h3>
+            {isActive && Object.entries(projectLinks).map(([name, project]) => (
+                <div className='external-link'>
+                    <a href={project.link} target='_blank' rel='noreferrer'>
+                        {name}
+                    </a>
+                    <p>{project.description}</p>
+                </div>
+            ))}
         </div>
     );
 };

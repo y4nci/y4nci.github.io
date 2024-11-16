@@ -1,16 +1,9 @@
 /* eslint-disable max-len */
-import BehanceDark from '../assets/images/icons_dark/behance.png';
-import GithubDark from '../assets/images/icons_dark/github.png';
-import LinkedinDark from '../assets/images/icons_dark/linkedin.png';
-import MailDark from '../assets/images/icons_dark/mail.png';
-import METUDark from '../assets/images/icons_dark/metu.png';
-import RYMDark from '../assets/images/icons_dark/rym.png';
-import BehanceLight from '../assets/images/icons_light/behance.png';
-import GithubLight from '../assets/images/icons_light/github.png';
-import LinkedinLight from '../assets/images/icons_light/linkedin.png';
-import MailLight from '../assets/images/icons_light/mail.png';
-import METULight from '../assets/images/icons_light/metu.png';
-import RYMLight from '../assets/images/icons_light/rym.png';
+// import CV from '../assets/images/icons/cv.png';
+import Github from '../assets/images/icons/github.png';
+import Linkedin from '../assets/images/icons/linkedin.png';
+import Mail from '../assets/images/icons/mail.png';
+import Source from '../assets/images/icons/source.png';
 
 type Projects = {
     [key: string]: {
@@ -31,14 +24,14 @@ export const projectLinks: Projects = {
         link: 'https://scanning-bee.github.io',
         description: 'A cross-platform, free and open source tool that allows you to annotate, scan, and visualize your real beehive using cutting-edge AI technologies.',
     },
-    'FileMap': {
-        link: 'https://filemap.com',
-        description: 'A map-based visual file manager.',
+    'MLP From Scratch': {
+        link: 'https://github.com/y4nci/mlp-from-scratch',
+        description: 'An MLP implementation from scratch, in Python. No numpy, no pandas, no torch, no tensorflow.',
     },
 };
 
 const ownedByMe = [
-    'Football Rankings', 'Bring the Twitter Bird Back',
+    'Football Rankings', 'Bring the Twitter Bird Back', 'MLP From Scratch',
 ];
 
 export const isOwnedByMe = (projectName: string) => ownedByMe.includes(projectName);
@@ -46,35 +39,30 @@ export const isOwnedByMe = (projectName: string) => ownedByMe.includes(projectNa
 const externalLinkURLs = {
     github: 'https://github.com/y4nci',
     linkedin: 'https://www.linkedin.com/in/baran-yanci/',
-    metu: 'https://user.ceng.metu.edu.tr/~e2449015/',
     mail: 'mailto:baranyanci@gmail.com',
-    behance: 'https://www.behance.net/yanci',
-    rym: 'https://rateyourmusic.com/~y4nci',
+    /* cv: 'http://baranyanci.com/cv.pdf', */
+    source: 'https://github.com/y4nci/y4nci.github.io',
 };
 
 type ExternalLink = keyof typeof externalLinkURLs;
 
-export const externalLinks = Object.keys(externalLinkURLs) as ExternalLink[];
+export const externalLinks = Object.keys(externalLinkURLs).filter(key => key !== 'source') as ExternalLink[];
 
 export const openExternalLink = (link: ExternalLink) => {
     window.open(externalLinkURLs[link], '_blank');
 };
 
-export const getIconForExternalLink = (link: ExternalLink, theme: Theme) => {
+export const getIconForExternalLink = (link: ExternalLink) => {
     switch (link) {
     case 'github':
-        return theme === 'light' ? GithubLight : GithubDark;
+        return Github;
     case 'linkedin':
-        return theme === 'light' ? LinkedinLight : LinkedinDark;
-    case 'metu':
-        return theme === 'light' ? METULight : METUDark;
+        return Linkedin;
     case 'mail':
-        return theme === 'light' ? MailLight : MailDark;
-    case 'behance':
-        return theme === 'light' ? BehanceLight : BehanceDark;
-    case 'rym':
-        return theme === 'light' ? RYMLight : RYMDark;
-    default:
-        return '';
+        return Mail;
+        /*     case 'cv':
+        return CV; */
+    case 'source':
+        return Source;
     }
 };
