@@ -195,3 +195,31 @@ body {
     color: var(--light-pinkish);
     font-weight: 200;
 }
+
+/** for narrow screens like mobile **/
+@media (max-width: 900px) {
+    body {
+        height: auto;
+    }
+    .content {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+    }
+    .projects {
+        width: 100%;
+    }
+    .projects > img {
+        margin-top: 0;
+    }
+    .something-somewhere {
+        width: 100%;
+        height: 385px;
+    }
+    .name {
+        width: 100%;
+    }
+    .right-strips {
+        width: 50px;
+    }
+}
