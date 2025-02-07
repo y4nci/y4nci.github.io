@@ -38,7 +38,7 @@ export const SomethingSomewhere = () => {
         {showThis('academic') && <p
             onClick={e => handleClick('academic', e)}
         >
-            Middle East Technical University, Department of Computer Engineering
+            B.Sc. Computer Engineering @ Middle East Technical University
         </p>}
         {showThis('professional') && <p
             onClick={e => handleClick('professional', e)}
@@ -50,8 +50,7 @@ export const SomethingSomewhere = () => {
         </p>}
 
         {showDescription('academic') && <p className='description'>
-            Senior computer engineering student, will graduate in January 2025.
-            Minoring in philosophy.
+            Graduated in 2025 with a GPA of 3.45/4.00.
         </p>}
 
         {showDescription('professional') && <p className='description'>
