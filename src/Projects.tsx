@@ -2,15 +2,13 @@ import { Icon } from '@blueprintjs/core';
 import React from 'react';
 
 import Keyboard from './assets/images/keyboard.png';
-import { projectLinks } from './services/externalLinks';
+import projectLinks from './assets/json/project_links.json';
 import { useActiveTab } from './services/useActiveTab';
 
 export const Projects = () => {
     const { activeTab, setActiveTab } = useActiveTab();
 
     const isActive = activeTab === 'projects';
-
-    console.log(projectLinks, isActive);
 
     return (
         <div

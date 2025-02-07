@@ -1,0 +1,18 @@
+{
+    "Football Rankings": {
+        "link": "http://baranyanci.com/football-rankings",
+        "description": "A web application that shows the current and historical rankings of tens of football leagues and hundreds of clubs, all over the world."
+    },
+    "Bring the Twitter Bird Back": {
+        "link": "https://chromewebstore.google.com/detail/bring-the-twitter-bird-ba/digdceeidmgbnjlmgjjcnndacaaobfgk?pli=1",
+        "description": "A simple Chrome extension to bring the Twitter bird everyone loves back to the Twitter website."
+    },
+    "Scanning Bee": {
+        "link": "https://scanning-bee.github.io",
+        "description": "A cross-platform, free and open source tool that allows you to annotate, scan, and visualize your real beehive using cutting-edge AI technologies."
+    },
+    "MLP From Scratch": {
+        "link": "https://github.com/y4nci/mlp-from-scratch",
+        "description": "An MLP implementation from scratch, in Python. No numpy, no pandas, no torch, no tensorflow."
+    }
+}

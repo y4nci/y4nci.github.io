@@ -1,0 +1,12 @@
+{
+    "showThis": {
+        "professional": "FileMap, Inc.",
+        "academic": "B.Sc. Computer Engineering @ Middle East Technical University",
+        "location": "Ankara, Turkey"
+    },
+    "showDescription": {
+        "professional": "Software engineer, responsible for the development of the company's flagship product. Since 2022.",
+        "academic": "Graduated in 2025 with a GPA of 3.45/4.00.",
+        "location": "Currently located in Ankara, Turkey."
+    }
+}

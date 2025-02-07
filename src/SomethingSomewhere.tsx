@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Light from './assets/images/light.png';
+import something_somewhere from './assets/json/something_somewhere.json';
 import { useActiveTab } from './services/useActiveTab';
 
 type Clicked = 'academic' | 'professional' | 'location' | null;
@@ -35,30 +36,19 @@ export const SomethingSomewhere = () => {
         backgroundSize: '150%',
         backgroundBlendMode: 'multiply',
     }} onClick={() => { setClicked(null); }}>
-        {showThis('academic') && <p
-            onClick={e => handleClick('academic', e)}
-        >
-            B.Sc. Computer Engineering @ Middle East Technical University
-        </p>}
-        {showThis('professional') && <p
-            onClick={e => handleClick('professional', e)}
-        >
-            FileMap, Inc.
-        </p>}
-        {showThis('location') && <p onClick={e => handleClick('location', e)}>
-            Ankara, Turkey
-        </p>}
-
-        {showDescription('academic') && <p className='description'>
-            Graduated in 2025 with a GPA of 3.45/4.00.
-        </p>}
-
-        {showDescription('professional') && <p className='description'>
-            Software engineer, responsible for the development of the company's flagship product. Since 2022.
-        </p>}
-
-        {showDescription('location') && <p className='description'>
-            Currently located in Ankara, Turkey.
-        </p>}
+        {
+            Object.entries(something_somewhere.showThis).map(([key, value]) => (
+                showThis(key as Clicked) && <p key={key} onClick={e => handleClick(key as Clicked, e)}>
+                    {value}
+                </p>
+            ))
+        }
+        {
+            Object.entries(something_somewhere.showDescription).map(([key, value]) => (
+                showDescription(key as Clicked) && <p key={key} className='description' onClick={e => handleClick(key as Clicked, e)}>
+                    {value}
+                </p>
+            ))
+        }
     </div>;
 };
