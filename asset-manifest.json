@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a8b6256.css",
-    "main.js": "/static/js/main.f0ba5b4b.js",
+    "main.css": "/static/css/main.1d020f39.css",
+    "main.js": "/static/js/main.66072bda.js",
     "static/media/grain.png": "/static/media/grain.d7497c86706678e281c7.png",
     "static/media/keyboard.png": "/static/media/keyboard.f88e438f6ded78289663.png",
     "static/media/light.png": "/static/media/light.c7a8df55e5f22efedbf2.png",
@@ -11,6 +11,7 @@
     "static/media/blueprint-icons-16.ttf?": "/static/media/blueprint-icons-16.4fdbe723235ba0fc46fb.ttf",
     "static/media/blueprint-icons-20.woff?": "/static/media/blueprint-icons-20.7f441e84a24ef32d88d9.woff",
     "static/media/blueprint-icons-16.woff?": "/static/media/blueprint-icons-16.f5b1a9d55dd59fe717ab.woff",
+    "static/media/spotify.png": "/static/media/spotify.0cbb2d1cdfab2548e7ef.png",
     "static/media/mail.png": "/static/media/mail.ba97f5fa247e487d7110.png",
     "static/media/NeueMontreal-Bold.otf": "/static/media/NeueMontreal-Bold.0836656dccdad13f5c96.otf",
     "static/media/NeueMontreal-Medium.otf": "/static/media/NeueMontreal-Medium.15b1070b8dac57958acf.otf",
@@ -22,11 +23,11 @@
     "static/media/linkedin.png": "/static/media/linkedin.0ccf95c4ec674fecb666.png",
     "static/media/source.png": "/static/media/source.34cbf38712b2f48bbf90.png",
     "index.html": "/index.html",
-    "main.2a8b6256.css.map": "/static/css/main.2a8b6256.css.map",
-    "main.f0ba5b4b.js.map": "/static/js/main.f0ba5b4b.js.map"
+    "main.1d020f39.css.map": "/static/css/main.1d020f39.css.map",
+    "main.66072bda.js.map": "/static/js/main.66072bda.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a8b6256.css",
-    "static/js/main.f0ba5b4b.js"
+    "static/css/main.1d020f39.css",
+    "static/js/main.66072bda.js"
   ]
 }
