@@ -1,12 +1,10 @@
 {
     "showThis": {
-        "professional": "FileMap, Inc.",
         "academic": "M.Sc. Computer Science @ TU Berlin, B.Sc. Computer Engineering @ METU",
-        "location": "Ankara, Turkey"
+        "location": "Berlin, Germany"
     },
     "showDescription": {
-        "professional": "Full-Stack Developer, responsible for the development of the company's flagship product. Since 2022.",
         "academic": "Pursuing a M.Sc. in Computer Science (Informatik) at TU Berlin since 2025.",
-        "location": "Currently located in Ankara, Turkey."
+        "location": "Currently located in Berlin, Germany."
     }
 }

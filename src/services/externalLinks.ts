@@ -4,6 +4,7 @@ import Github from '../assets/images/icons/github.png';
 import Linkedin from '../assets/images/icons/linkedin.png';
 import Mail from '../assets/images/icons/mail.png';
 import Source from '../assets/images/icons/source.png';
+import Spotify from '../assets/images/icons/spotify.png';
 import externalLinksJSON from '../assets/json/external_links.json';
 
 type ExternalLink = keyof typeof externalLinksJSON;
@@ -26,5 +27,7 @@ export const getIconForExternalLink = (link: ExternalLink) => {
         return CV; */
     case 'source':
         return Source;
+    case 'spotify':
+        return Spotify;
     }
 };

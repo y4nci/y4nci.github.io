@@ -196,6 +196,22 @@ body {
     font-weight: 200;
 }
 
+.external-link.spotify-link {
+    opacity: 0.6;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.external-link.spotify-link > span {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.external-link.spotify-link:hover {
+    opacity: 0.9;
+}
+
 /** for narrow screens like mobile **/
 @media (max-width: 900px) {
     body {
